@@ -21,5 +21,6 @@ cat > /etc/docker/daemon.json <<EOF
 }
 EOF
 mkdir -p /etc/systemd/system/docker.service.d
+sysctl net.bridge.bridge-nf-call-iptables=1
 systemctl daemon-reload
 systemctl restart docker
