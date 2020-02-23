@@ -1,4 +1,5 @@
 #!/bin/bash
+swapoff -a
 apt-get update && apt-get install -y \
   apt-transport-https ca-certificates curl software-properties-common gnupg2
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
